@@ -743,9 +743,6 @@ class GeneticAlgorithm:
         # Convert timestamps to ISO string
         result["start_time"] = (result["start_time"]).isoformat()
         result["end_time"] = (result["end_time"]).isoformat()
-        result["duration"] = (
-            fitness_result.end_time - fitness_result.start_time
-        ).total_seconds()
 
         output_dir = os.path.join(
             self.output_dir, self.format, "generation_%s" % generation_id
